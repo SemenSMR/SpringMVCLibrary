@@ -25,7 +25,7 @@ public class BookController {
 
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<Book> getBooksById(@PathVariable Long id) {
         return bookService.findById(id)
                 .map(ResponseEntity::ok)
